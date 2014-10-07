@@ -1,0 +1,41 @@
+In file included from ../gui/SoDaRadio_Top.h:40:0,
+                 from UDSockets.hxx:34,
+                 from UI.hxx:36,
+                 from USRPRX.hxx:35,
+                 from SoDaServer.cxx:117:
+../gui/RadioListenerThread.hxx:51:5: error: ‘UD’ in namespace ‘SoDa’ does not name a type
+     SoDa::UD::ClientSocket * cmd_q, * fft_q; 
+     ^
+In file included from UDSockets.hxx:34:0,
+                 from UI.hxx:36,
+                 from USRPRX.hxx:35,
+                 from SoDaServer.cxx:117:
+../gui/SoDaRadio_Top.h:179:5: error: ‘UD’ in namespace ‘SoDa’ does not name a type
+     SoDa::UD::ClientSocket * GetCmdQueue() { return soda_radio; }
+     ^
+../gui/SoDaRadio_Top.h:180:5: error: ‘UD’ in namespace ‘SoDa’ does not name a type
+     SoDa::UD::ClientSocket * GetFFTQueue() { return soda_fft; }
+     ^
+../gui/SoDaRadio_Top.h:281:5: error: ‘UD’ in namespace ‘SoDa’ does not name a type
+     SoDa::UD::ClientSocket * soda_radio, * soda_fft;
+     ^
+../gui/SoDaRadio_Top.h:283:5: error: ‘UD’ in namespace ‘SoDa’ does not name a type
+     SoDa::UD::TrackerSocket * soda_tracker;
+     ^
+../gui/SoDaRadio_Top.h:285:21: error: expected identifier before ‘return’
+     void GetTracker(return soda_tracker);   
+                     ^
+../gui/SoDaRadio_Top.h:285:21: error: expected ‘,’ or ‘...’ before ‘return’
+../gui/SoDaRadio_Top.h: In member function ‘void SoDaRadio_GUI::SoDaRadio_Top::sendMsg(SoDa::Command*)’:
+../gui/SoDaRadio_Top.h:288:7: error: ‘soda_radio’ was not declared in this scope
+       soda_radio->put(cmd, sizeof(SoDa::Command));
+       ^
+In file included from UI.hxx:36:0,
+                 from USRPRX.hxx:35,
+                 from SoDaServer.cxx:117:
+UDSockets.hxx: At global scope:
+UDSockets.hxx:77:35: error: ‘SodaRadio_Top’ has not been declared
+   void getParser(std::string cmd, SodaRadio_Top * radio);
+                                   ^
+make[1]: *** [SoDaServer-SoDaServer.o] Error 1
+make: *** [all-recursive] Error 1

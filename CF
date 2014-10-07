@@ -1,0 +1,2 @@
+./gui/SoDaRadio_GUI.cpp:	b_tx_2_rx1 = new wxButton( this, wxID_ANY, wxT("RX->TX"), wxDefaultPosition, wxSize( 60,-1 ), 0 );
+./gui/SoDaRadio_GUI.cxx:	b_tx_2_rx1 = new wxButton( this, wxID_ANY, wxT("RX->TX"), wxDefaultPosition, wxSize( 60,-1 ), 0 );

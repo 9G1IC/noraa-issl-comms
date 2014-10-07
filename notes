@@ -1,0 +1,23 @@
+Features Added:
+1. Remote tuning of TX/RX by a tracker e.g. Gpredict
+2. NBFM transmission
+3. Signal Selection using the mouse
+
+My kernel version:
+Linux 3.13.0-32-generic
+
+My Distro
+Ubuntu 14.04
+
+UHD version
+libuhd-dev 3.5.5-1
+
+Patched Files:
+UDSockets.cxx, UDSockets.hxx
+RadioListenerThread.cxx, RadioListenerThread.hxx
+SoDaRadio_Top.cxx, SoDaRadio_Top.h
+SoDaRadio_Top_Events.cxx, SoDaRadio_Top_Events.hxx
+GuiParams.cxx, GuiParams.hxx
+
+Added Files:
+sine_table.h
